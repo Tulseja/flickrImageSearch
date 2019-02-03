@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="15dp"
+    >
+
+    <android.support.design.widget.TextInputLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:id="@+id/search_til"
+        android:layout_marginLeft="3dp"
+        android:layout_width="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/search_iv"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/search_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:focusable="true"
+            android:longClickable="false"
+            android:textColor="@android:color/black"
+            android:textColorHint="#222222"
+            android:hint="Search for kittens,dogs etc."
+            android:textSize="16sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/search_iv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_search"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toRightOf="@id/search_til"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="7dp"
+
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/search_til"
+        android:layout_marginTop="20dp"
+
+    />
+
+</android.support.constraint.ConstraintLayout>
